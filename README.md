@@ -1,7 +1,7 @@
 Project Overview
 ========
 
-Rappture package for Astro 8300 project. Particularly a simple **Galactic Chemical Evolution (GCE)** tool which graphs quatnties for the Clayton GCE models.
+Rappture package for Astro 8300 project. Particularly a simple **Galactic Chemical Evolution (GCE)** tool which graphs quantities for the Clayton GCE models.
 
 Installation
 ------------
