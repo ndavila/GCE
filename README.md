@@ -1,7 +1,7 @@
 Overview
 ========
 
-astr8300_rappture is a sample package for Astr8300 rappture projects
+Rappture package for Astro 8300 project. Particularly a simple Galactic Chemical Evolution (GCE) tool which graphs quatnties for the Clayton GCE models.
 
 Installation
 ------------
@@ -15,4 +15,5 @@ You will need a computer with [rappture](https://nanohub.org/infrastructure/rapp
 Authors
 -------
 
+- Norberto J. Davila <ndavila@clemson.edu>
 - Bradley S. Meyer <mbradle@clemson.edu>
