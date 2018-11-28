@@ -16,7 +16,7 @@ You will need a computer with [rappture](https://nanohub.org/infrastructure/rapp
 Ratio of secondary radioactive species to primary stable species
 ----------------------------------------------------------------
 
-<sup>129</sup>I &frac; <sup>127</sup>I;
+<sup>129</sup>I &frasl; <sup>127</sup>I;
 
 Authors
 -------
