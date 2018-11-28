@@ -13,6 +13,11 @@ You will need a computer with [rappture](https://nanohub.org/infrastructure/rapp
 * export PATH=$PATH:/usr/local/rappture/bin/
 * rappture
 
+Ratio of secondary radioactive species to primary stable species
+----------------------------------------------------------------
+
+&frac<sup>129</sup>I<sup>127</sup>I;
+
 Authors
 -------
 
