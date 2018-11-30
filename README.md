@@ -18,7 +18,12 @@ Ratio of secondary radioactive species to primary stable species
 
 <sup>129</sup>I &frasl; <sup>127</sup>I = &beta;<sub>129</sub>&alpha;&omega;&tau;<sub>129</sub> &frasl; &alpha;<sub>127</sub>
 
-\frac{a}{b}
+ 129      beta    alpha omega tau    
+    I         129                129 
+ ----  =  -------------------------- 
+ 127               alpha             
+    I                   127          
+
 
 Authors
 -------
