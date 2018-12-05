@@ -9,10 +9,10 @@
         <string id="formula">
             <about>
                 <label>f(x)</label>
-                <hints>Example: 2*x + 1</hints>
+                <hints>Example: 4*x - 2</hints>
             </about>
             <size>30x5</size>
-	    <default>2*x+1</default>
+	    <default>4*x-2</default>
         </string>
         <number id="min">
             <about>
