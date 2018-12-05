@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <run>
     <tool>
-        <title>Integrating and Graphing Calculator</title>
+        <title>Root Finder</title>
         <about>Press Simulate to view results.</about>
-        <command>python @tool/HW39.py @driver</command>
+        <command>python @tool/save.py @driver</command>
     </tool>
     <input>
         <string id="formula">
