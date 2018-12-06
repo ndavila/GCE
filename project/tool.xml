@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <run>
     <tool>
-        <title>Integrating and Graphing Calculator</title>
+        <title>Gas Mass and Star Formation Rate Calculator</title>
         <about>Press Simulate to view results.</about>
-        <command>python @tool/HW39.py @driver</command>
+        <command>python @tool/gas_mass.py @driver</command>
     </tool>
     <input>
         <string id="formula">
             <about>
-                <label>f(x)</label>
-                <hints>Example: 2*x + 1</hints>
+                <label>MG(x)</label>
+                <hints>Example:</hints>
             </about>
             <size>30x5</size>
 	    <default>2*x+1</default>
