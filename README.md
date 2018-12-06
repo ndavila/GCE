@@ -1,7 +1,8 @@
 Project Overview
 ========
 
-Rappture package for Astro 8300 project. Particularly a simple **Galactic Chemical Evolution (GCE)** tool which graphs quantities for the Clayton GCE models.
+A simple **Galactic Chemical Evolution (GCE)** tool which graphs quantities for the Clayton GCE models. In particular it calculates the star formation rate and solves the differential equation for the gas mass when an infall function is
+input.
 
 Installation
 ------------
@@ -12,6 +13,12 @@ You will need a computer with [rappture](https://nanohub.org/infrastructure/rapp
 * cd GCE
 * export PATH=$PATH:/usr/local/rappture/bin/
 * rappture
+
+Change in Gas Mass equation
+---------------------------
+
+![gas mass](https://github/ndavila/GCE/blob/master/gas_mass.png)
+
 
 Ratio of secondary radioactive species to primary stable species
 ----------------------------------------------------------------
