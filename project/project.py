@@ -1,19 +1,21 @@
+import sys
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-def model (y,t):
+def model (m,t):
     k = 1
-    dydt = (-0.03 * y) + (k + t)**(-1)
-    return dydt
+    dmdt = (-0.3 * m) + k*(1 + t)**(-1)
+    return dmdt
 
-y0 = 5
+m0 = 0
 
-t = np.linspace(0,20)
+t = np.linspace(0,50, 500)
 
-y = odeint(model,y0,t)
+m = odeint(model,m0,t)
 
-plt.plot(t,y)
+plt.plot(t,m)
 plt.xlabel('time')
 plt.ylabel('$M_{g}(t)$')
+plt.title('$M_{g}$ vs time')
 plt.show()
