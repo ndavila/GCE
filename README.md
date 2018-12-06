@@ -17,7 +17,7 @@ You will need a computer with [rappture](https://nanohub.org/infrastructure/rapp
 Change in Gas Mass equation
 ---------------------------
 
-![gas mass](https://github/ndavila/GCE/blob/master/gas_mass.png)
+![gas mass](https://github.com/ndavila/GCE/blob/master/gas_mass.png)
 
 
 Ratio of secondary radioactive species to primary stable species
