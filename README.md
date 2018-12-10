@@ -11,7 +11,7 @@ You will need a computer with [rappture](https://nanohub.org/infrastructure/rapp
 
 * git clone https://github.com/ndavila/GCE.git
 * cd GCE
-* export PATH=$PATH:/usr/local/rappture/bin/
+* cd project
 * rappture
 
 Change in Gas Mass equation
