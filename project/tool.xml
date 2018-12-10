@@ -9,10 +9,10 @@
         <string id="formula">
             <about>
                 <label>M(t)</label>
-                <hints>Example: 2*t + 1</hints>
+                <hints>Example: ((1 +t)**-1)*exp(-t) + 1</hints>
             </about>
             <size>30x5</size>
-	    <default>2*t+1</default>
+	    <default>((1 +t)**-1)*exp(-t) + 1</default>
         </string>
         <number id="min">
             <about>
@@ -37,7 +37,7 @@
         </number>
 	<number id="Y0">
 	   <about>
-	      <label>Y0</label>
+	      <label>M0</label>
 	      <description>The value of M at the minimum t</description>
            </about>
             <default>0.1</default>

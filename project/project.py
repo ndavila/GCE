@@ -3,6 +3,7 @@ import Rappture
 import numpy as np
 from scipy.integrate import odeint
 from scipy import optimize
+from math import *
 
 def f(m, t, formula):
     return eval(formula)
@@ -14,7 +15,7 @@ def calc(t, a, formula):
 def g(t, formula):
     return eval(formula)
 
-def calc2(y, t, formula):
+def model(y, t, formula):
     return eval(formula)
 
 def main():
@@ -33,13 +34,13 @@ def main():
     formula = io.get('input.string(formula).current')
 
     t = np.linspace(tmin, tmax, npts)
-    sol = odeint(calc2, y0, t, args=(formula,))
+    sol = odeint(model, y0, t, args=(formula,))
 
-    io.put('output.curve(result2).about.label','M(t) vs t',append=2)
-    io.put('output.curve(result2).yaxis.label','M(t)')
+    io.put('output.curve(result2).about.label','dM(t)/dt vs t',append=0)
+    io.put('output.curve(result2).yaxis.label','dM(t)/dt')
     io.put('output.curve(result2).xaxis.label','t')
 
-    io.put('output.curve(result3).about.label','Integral of M(t) vs t',append=2)
+    io.put('output.curve(result3).about.label','Integral of M(t) vs t',append=0)
     io.put('output.curve(result3).yaxis.label','Integral of M(t)')
     io.put('output.curve(result3).xaxis.label','t')
 
@@ -49,7 +50,7 @@ def main():
                 '%g %g\n' % (t[i],g(t[i],formula)), append=1
               )
         io.put(
-                'output.curve(result3).component.xy'
+                'output.curve(result3).component.xy',
                 '%g %g\n' % (t[i],sol[i][0]), append=1
               )
 
