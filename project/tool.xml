@@ -9,10 +9,10 @@
         <string id="formula">
             <about>
                 <label>M(t)</label>
-                <hints>Example: ((1 +t)**-1)*exp(-t) + 1</hints>
+                <hints>Example: ((1 +t)**-1) - 0.3</hints>
             </about>
             <size>30x5</size>
-	    <default>((1 +t)**-1)*exp(-t) + 1</default>
+	    <default>((1 +t)**-1) - 0.3</default>
         </string>
         <number id="min">
             <about>
@@ -33,7 +33,7 @@
 	        <label>a</label>
 		<description>The addend to the root equation</description>
 	    </about>
-            <default>10</default>
+            <default>0</default>
         </number>
 	<number id="Y0">
 	   <about>
