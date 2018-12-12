@@ -18,11 +18,9 @@ def calc(t, a, formula):
     x = odeint(m, a, t, args = (formula,))
     return z[1]
 
-def gas_frac(t, a, b, formula, m, gas_mass, omega, y, z):
-    b = 0.15
-    return y[1]/z[1] - b
+def gas_frac(t, a, formula, m, gas_mass, omega, y, z):
+    return y[1]/z[1]
 
-#def ru():
 
 def main():
 
@@ -84,11 +82,12 @@ def main():
               )
         io.put(
                 'output.curve(result4).component.xy',
-                '%g %g\n' % (t[i], y[i][0]/z[i][0]), append=1
+                '%g %g\n' % (t[i], y[i][0]/(z[i][0] + 0.01)), append=1
               )
 
-#    root = optimize.brentq(calc, y0, tmin, tmax,
-#            args =  (omega, formula, gas_mass))
+#    b = 0.15
+#    root = optimize.brentq(gas_frac, -b, tmin, tmax,
+#            args = ())
 
     my_str_base = 'int_0^root (' + formula + ')dx '
 

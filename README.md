@@ -1,8 +1,8 @@
 Project Overview
 ========
 
-A simple **Galactic Chemical Evolution (GCE)** tool which graphs quantities for the Clayton GCE models. In particular it calculates the star formation rate and solves the differential equation for the gas mass when an infall function is
-input.
+A simple **Galactic Chemical Evolution (GCE)** tool which graphs quantities for the Clayton GCE models. In particular it calculates the star formation rate and solves the differential equation for the gas mass, along with the total mass
+when an infall function is input.
 
 Installation
 ------------
