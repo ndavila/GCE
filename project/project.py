@@ -18,7 +18,11 @@ def calc(t, a, formula):
     x = odeint(m, a, t, args = (formula,))
     return z[1]
 
-#def calc2():
+def gas_frac(t, a, b, formula, m, gas_mass, omega, y, z):
+    b = 0.15
+    return y[1]/z[1] - b
+
+#def ru():
 
 def main():
 
@@ -59,6 +63,12 @@ def main():
             'Integral of f(t)')
     io.put('output.curve(result3).xaxis.label','t')
 
+    io.put('output.curve(result4).about.label',
+            'Integral of dMG/dt over Integral of f(t) vs t',append=0)
+    io.put('output.curve(result4).yaxis.label',
+            'Gas mass fraction')
+    io.put('output.curve(result4).xaxis.label','t')
+
     for i in range(npts):
         io.put(
                 'output.curve(result0).component.xy',
@@ -71,6 +81,10 @@ def main():
         io.put(
                 'output.curve(result3).component.xy',
                 '%g %g\n' % (t[i],z[i][0]), append=1
+              )
+        io.put(
+                'output.curve(result4).component.xy',
+                '%g %g\n' % (t[i], y[i][0]/z[i][0]), append=1
               )
 
 #    root = optimize.brentq(calc, y0, tmin, tmax,
