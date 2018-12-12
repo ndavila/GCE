@@ -9,10 +9,10 @@
         <string id="formula">
             <about>
                 <label>M(t)</label>
-                <hints>Example: ((1 +t)**-1) - 0.3</hints>
+		<hints>Example: 1. / (1. + t)</hints>
             </about>
             <size>30x5</size>
-	    <default>((1 +t)**-1) - 0.3</default>
+	    <default>1. / (1. + t)</default>
         </string>
         <number id="min">
             <about>
