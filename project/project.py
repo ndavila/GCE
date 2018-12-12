@@ -8,15 +8,17 @@ from math import *
 def f(t, formula):
     return eval(formula)
 
-def total_mass(y, t, formula):
-    return f(t, formula)
-
 def gas_mass(y, t, formula, omega):
     return -omega * y[0] + f(t, formula)
 
-def calc(y0, t, formula, gas_mass, omega):
-    x = odeint(gas_mass[0], y0, t, args = (formula,omega))
-    return x[1] - gas_mass[0]
+def m(z, t, formula):
+    return eval(formula)
+
+def calc(t, a, formula):
+    x = odeint(m, a, t, args = (formula,))
+    return z[1]
+
+#def calc2():
 
 def main():
 
@@ -28,7 +30,7 @@ def main():
 
     tmin = float(io.get('input.number(min).current'))
     tmax = float(io.get('input.number(max).current'))
-#    a = float(io.get('input.number(a).current'))
+    a = float(io.get('input.number(a).current'))
     y0 = float(io.get('input.number(Y0).current'))
     npts = int(io.get('input.number(Npts).current'))
     formula = io.get('input.string(formula).current')
@@ -37,19 +39,25 @@ def main():
 
     omega = 0.3
 
-    y = odeint(gas_mass, y0, t, args=(formula,omega))
+    y = odeint(gas_mass, y0, t, args=(formula, omega))
     
-#    z = odeint(total_mass, y0, t, args=(formula,))
+    z = odeint(m, a, t, args=(formula,))
 
     io.put('output.curve(result0).about.label','f(t) vs t',append=0)
     io.put('output.curve(result0).yaxis.label','f(t)')
     io.put('output.curve(result0).xaxis.label','t')
 
-    io.put('output.curve(result2).about.label',
+    io.put('output.curve(result1).about.label',
             'Integral of dMG/dt vs t',append=0)
-    io.put('output.curve(result2).yaxis.label',
+    io.put('output.curve(result1).yaxis.label',
             'Integral of dMG/dt')
-    io.put('output.curve(result2).xaxis.label','t')
+    io.put('output.curve(result1).xaxis.label','t')
+
+    io.put('output.curve(result3).about.label',
+            'Integral of f(t) vs t',append=0)
+    io.put('output.curve(result3).yaxis.label',
+            'Integral of f(t)')
+    io.put('output.curve(result3).xaxis.label','t')
 
     for i in range(npts):
         io.put(
@@ -57,8 +65,12 @@ def main():
                 '%g %g\n' % (t[i],f(t[i],formula)), append=1
               )
         io.put(
-                'output.curve(result2).component.xy',
+                'output.curve(result1).component.xy',
                 '%g %g\n' % (t[i],y[i][0]), append=1
+              )
+        io.put(
+                'output.curve(result3).component.xy',
+                '%g %g\n' % (t[i],z[i][0]), append=1
               )
 
 #    root = optimize.brentq(calc, y0, tmin, tmax,
