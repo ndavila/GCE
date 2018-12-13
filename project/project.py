@@ -89,7 +89,7 @@ def main():
 #    root = optimize.brentq(gas_frac, -b, tmin, tmax,
 #            args = ())
 
-    my_str_base = 'int_0^root (' + formula + ')dx '
+    my_str_base = 'int_0^root gas fraction minus 0.15 dx '
 
     my_str = '\nRoot of ' + my_str_base + '' 
 
