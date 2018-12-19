@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<run>
+    <tool>
+        <title>Integrating and Root-finding Calculator</title>
+        <about>Press Simulate to view results.</about>
+        <command>python @tool/project.py @driver</command>
+    </tool>
+    <input>
+        <string id="formula">
+            <about>
+                <label>f(t)</label>
+                <description>Infall rate (Solar masses per Gyr).</description>
+                <hints>Example: 1.e11 * exp(-t)</hints>
+            </about>
+            <size>30x5</size>
+            <default>1.e11 * exp(-t)</default>
+        </string>
+        <number id="min">
+            <about>
+                <label>Start time</label>
+                <description>Starting time (Gyr).</description>
+            </about>
+            <default>0</default>
+        </number>
+        <number id="max">
+            <about>
+                <label>End time</label>
+                <description>Ending time (Gyr).</description>
+            </about>
+            <default>20</default>
+        </number>
+        <number id="t0">
+            <about>
+                <label>t0</label>
+                <description>Time at which to measure gas fraction (Gyr)</description>
+            </about>
+            <default>13.5</default>
+        </number>
+        <number id="f0">
+            <about>
+                <label>f0</label>
+                <description>Gas fraction at t0</description>
+            </about>
+            <default>0.15</default>
+        </number>
+        <number id="MG_0">
+           <about>
+              <label>MG_0</label>
+              <description>Gas mass at start time</description>
+           </about>
+            <default>0.</default>
+        </number>
+        <number id="Npts">
+           <about>
+              <label>Number of points</label>
+              <description>This is the number for output.</description>
+           </about>
+            <default>100</default>
+            <min>10</min>
+        </number>
+    </input>
+</run>
